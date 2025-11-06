@@ -1,0 +1,117 @@
+/* Basic reset and font settings */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f2f5; /* Light gray background, easy on the eyes */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* The main container for the chatbot */
+.chatbot-container {
+    width: 450px;
+    height: 700px;
+    background-color: #ffffff; /* Clean white for the main window */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps everything contained */
+}
+
+/* Header styling */
+header {
+    background-color: #4a90e2; /* A calming, academic blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* The main chat window */
+.chat-window {
+    flex-grow: 1; /* Allows this area to expand and fill available space */
+    padding: 20px;
+    overflow-y: auto; /* Adds a scrollbar if messages overflow */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between messages */
+}
+
+/* General styling for all chat messages */
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    line-height: 1.4;
+}
+
+/* Styling for messages from the user */
+.user-message {
+    background-color: #e9e9eb; /* Light gray for user messages */
+    color: #333;
+    align-self: flex-end; /* Aligns user messages to the right */
+    border-bottom-right-radius: 5px; /* "Tails" for the speech bubble */
+}
+
+/* Styling for messages from the bot */
+.bot-message {
+    background-color: #4a90e2; /* Same blue as the header */
+    color: white;
+    align-self: flex-start; /* Aligns bot messages to the left */
+    border-bottom-left-radius: 5px; /* "Tails" for the speech bubble */
+}
+
+/* The message input form at the bottom */
+footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.message-form {
+    display: flex;
+    gap: 10px;
+}
+
+#message-input {
+    flex-grow: 1; /* Input field takes up most of the space */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+#message-input:focus {
+    outline: none;
+    border-color: #4a90e2; /* Highlight with blue on focus */
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357abd; /* Darker blue on hover */
+}
